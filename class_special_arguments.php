@@ -31,20 +31,18 @@
 	 Prześlijcie wasze opinie na email <ber34@o2.pl>
  
  */
-   class special_arguments{ 
-           public $person;
-		   
-           public function __construct(){
-			  $arg =  func_num_args();
-			  for($i=0; $i<= count($arg); $i++){
-			      $tabarg=array();
-			  	  $tabarg[] = func_get_args($i);
-			  }
-               return $this->person =  $tabarg;
-           }
-           
-           public function car(){
-               return $this->person;
-           }  
-}
+  class special_arguments{
+       public $person = array();
+     
+    public function __construct(){
+      if($arg = func_num_args()>0){
+         $this->person = func_get_args();
+      }
+     }
+     
+      public function car(){
+        return $this->person;
+     }
+    }
+  
 
