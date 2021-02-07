@@ -94,7 +94,7 @@ class special_arguments
  
  ## albo ##
  
- $test = new special_arguments(array("a"=>new person11(), "e"=>new person55()));
+ $test = new special_arguments(array("a"=>new person11(), "a"=>new person12(),, "e"=>new person55()));
  
  echo $test->person1()->person11();
  echo "---";
