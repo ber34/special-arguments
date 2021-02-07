@@ -1,18 +1,24 @@
 <?php
-class person11
+class Person
 {
+	
  public function person11()
  { 
-  return "person 1"; 
+  return "Person pozycja 1"; 
  } 
 
  public function person12()
  {
-   return "person 1 i 2"; 
+   return "Person pozycja 2"; 
+ } 
+ 
+  public function person13()
+ {
+   return "Person pozycja 3"; 
  } 
 } 
  
-class person22
+class Person2
 {
  public function person22()
  {
@@ -20,7 +26,7 @@ class person22
  } 
 }
  
- class person33
+ class Person3
  {
   public function person33()
   { 
@@ -28,7 +34,7 @@ class person22
   } 
  }
  
- class person44
+ class Person4
  {
   public function person44()
   {
@@ -36,11 +42,27 @@ class person22
   }
  } 
  
-class person55
+class Person5
 {
- public function person55()
+  public function person11()
  { 
-   return "person 5";
+   return "Person5 pozycja 1";
+ }
+  public function person12()
+ { 
+   return "Person 5 pozycja 2";
+ }
+  public function person13()
+ { 
+   return "Person 5 pozycja 3";
+ }
+   public function person14()
+ { 
+   return "Person 5 pozycja 2";
+ }
+  public function person14()
+ { 
+   return "Person 5 pozycja 3";
  }
 } 
  
@@ -94,11 +116,21 @@ class special_arguments
  
  ## albo ##
  
- $test = new special_arguments(array("a"=>new person11(), "a"=>new person12(),, "e"=>new person55()));
+ $test = new special_arguments(array("a"=>new Person(), "e"=>new Person5()));
  
  echo $test->person1()->person11();
  echo "---";
  echo $test->person1()->person12();
  echo "---";
- echo $test->person5()->person55();
+ echo $test->person1()->person13();
+ echo "---";
+ echo $test->person5()->person11();
+ echo "---";
+ echo $test->person5()->person12();
+ echo "---";
+ echo $test->person5()->person13();
+ echo "---";
+ echo $test->person5()->person14();
+ echo "---";
+ echo $test->person5()->person15();
  
